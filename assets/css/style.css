@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
+
+header {
+    margin: 0;
+    
+}
+body{
+    margin: 0;
+    height: 100vh; /* Ensure the body spans the full viewport height */
+    background-image: url(../image/artem.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex; /* Use flex to center or adjust child content if needed */
+    flex-direction: column;
+      
+}
+.bground-color{
+    color: floralwhite;
+    /*background-color: rgba(157, 163, 106, 0.4);*/
+    text-align: center;    
+   
+}
+
