@@ -26,10 +26,140 @@ body{
 
 .bground-color{
     color: floralwhite;
-    background-color: rgba(157, 163, 106, 0.4);
-    text-align: center;    
+    /*background-color: rgba(157, 163, 106, 0.4); */
+    text-align: center;
+    padding: 1rem 0;
+    position: relative; /* Ensure navbar positioning works within the header */    
    
 }
-.navbar{
-    margin-top: 0;
+
+/* Heading */
+.heading h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+/* Heading */
+.heading h4 {
+    font-size: 1.5rem;
+    font-weight: 300px;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 1rem;
+}
+#nav {
+    display: flex;
+    gap: 1.5rem;
+}
+.nav-list {
+    position: relative;
+}
+.nav-link {
+    color: floralwhite;
+    font-size: 1rem;
+    font-weight: 500;
+}
+.nav-link:hover {
+    text-decoration: underline;
+}
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    color: fafa;
+    border: none;
+    padding: 0.5rem 0;
+    display: none; /* Initially hidden */
+    z-index: 10;
+}
+.dropdown-menu .dropdown-item {
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease-in-out;
+}
+.dropdown-menu .dropdown-item:hover {
+    background-color: grey;
+}
+/* Show Dropdown Menu on Hover */
+.nav-list:hover .dropdown-menu {
+    display: block;
+}
+.navbar-toggler {
+    /*background-color: white;*/
+    border: none;
+}
+.navbar-toggler-icon {
+    color: black;
+}
+/* Responsive Design */
+@media (max-width: 768px) {
+    #nav {
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+}
+.dropdown-menu {
+    position: static; /* Adjust for stacking */
+}
+.navbar {
+    margin: 0;
+    text-align: center;
+}
+.navbar-toggler {
+    display: block;
+}
+
+.collapse {
+    display: none;
+}
+
+.collapse.show {
+    display: flex;
+}
+/*---------footer....*/
+footer {
+    background-color: #525252;
+    color: #fafafa;
+    min-height: 150px;
+    
+}
+
+
+.social-links li a i {
+    width: 32px;
+    height: 32px;
+    padding: 12px 0;
+    border-radius: 50%;
+    font-size: 16px;
+    line-height: 7px;
+    text-align: center;
+    color: #fafafa;
+    background: #8f8f8f;
+    transition: all 0.35s ease-in-out;
+}
+.social-links li a i:hover {
+    background-color: #fafafa;
+    color: #525252;
+}
+.collapse p {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #fafafa;
+}
+
+#aboutText{
+    font-size: 0.95rem;
+    line-height: 1.5;
+    color: #fafafa;
+}
+.contact{
+    display: inline;
+
 }

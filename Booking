@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+        type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>KarlsDinner</title>
+</head>
+
+<body>
+    <header>
+        <div class="row">
+            <div class="col-md-12">
+                <div class="row bground-color align-items-center">
+                    <div class="col heading">
+                        <h1>Karl's Dinner</h1>
+                        <h4>Come Eat and checkmate</h4>
+                    </div>
+                </div>
+                <div class="col-auto sm-auto">
+                    <!--Navbar-->
+                    <div class="navbar navbar-dark">
+                        <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse" id="navbar-Nav">
+                            <ul id="nav">
+                                <li class="nav-list">
+                                    <a href="#"><span>Home</span></a>
+                                </li>
+                                <li class="nav-list">
+                                    <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" 
+                                    data-bs-toggle="dropdown" aria-expanded="false"><span>menu</span></a>
+                                    <ul class="dropdown-menu" aria-labelledby="menuDropdown">
+                                        <li><a class="dropdown-item" href="#">Breakfast</a></li>
+                                        <li><a class="dropdown-item" href="#">Lunch</a></li>
+                                        <li><a class="dropdown-item" href="#">Dinner</a></li>
+                                    </ul>
+                                </li>
+                                <li class="nav-list">
+                                    <a href="#"><span>Bookings</span></a>
+                                </li>
+                                <li class="nav-list">
+                                    <a href="#"><span>Contact</span></a>
+                                </li>
+                            </ul>
+                        </div>                        
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <section>
+
+    </section>
+    <footer>
+
+    </footer>
+    </div>
+</body>
+
+</html>

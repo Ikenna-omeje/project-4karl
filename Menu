@@ -4,10 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" type="text/css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css" />    
     <link rel="stylesheet" href="assets/css/style.css">
     <title>KarlsDinner</title>
 </head>
@@ -60,26 +59,19 @@
     </header>
     <section>
 
-
     </section>
-    <footer class="container-fluid mt-auto list-inline-item">
-        <div class="row p-4 text-light">
-            <!--about section-->
-            <div class="col-sm-4 ">
+    <footer class="container-fluid">
+        <div class="row">
+            <div class="col-sm-4">
                 <h5 class="uppercase general-sub">About</h5>
-                <button class="btn btn-link text-light p-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#aboutText" aria-expanded="false" aria-controls="aboutText">
-                    Learn more
-                </button>
-                <div class="collapse" id="aboutText">
-                    <p class="mt-2">
-                        karl's dinner is a hybrid restaurant that combines a well-prepared homely meal, 
-                        with exotic spices and delicacies from around the world and the love of chess, and a pint of fine wine.
-                    </p>                 
-                </div> 
+                <p>
+                    karl's dinner is a hybrid restaurant that combines a well prepared homely meal, 
+                    with exotic spieces and delicacies from round the world and the love of chess with a pint of fine wine.
+                </p>
+                
 
             </div>
-            <div class="col-sm-4 ">
+            <div class="col-sm-4">
                 <h5 class="uppercase general-sub">Social</h5>
                 <ul class="list-inline social-links">
                     <li class="list-inline-item">
@@ -101,15 +93,8 @@
                         </a>
                     </li>
             </div>
-            <div class="col-sm-4 ">
-                <h5 class="uppercase general-sub">Contact</h5>
-                <p class="contact">
-                    Address: DuvbergVagen 10, Stockholm-Sweden.
-                    Phone: +46-78787878
-                    Email: KarlsDinner@dinner.com
-                </p>
-            </div>
         </div>
+
     </footer>
     </div>
 </body>
