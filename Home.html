@@ -4,10 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
-        type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        type="text/css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" type="text/css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
     <link rel="stylesheet" href="assets/css/style.css">
     <title>KarlsDinner</title>
 </head>
@@ -26,18 +27,18 @@
                     <!--Navbar-->
                     <div class="navbar navbar-dark">
                         <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                            data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                            data-bs-target="#navbar-Nav" aria-controls="navbarNav" aria-expanded="false"
                             aria-label="Toggle navigation">
                             <span class="navbar-toggler-icon"></span>
                         </button>
                         <div class="collapse navbar-collapse" id="navbar-Nav">
                             <ul id="nav">
                                 <li class="nav-list">
-                                    <a href="#"><span>Home</span></a>
+                                    <a href="Home.html"><span>Home</span></a>
                                 </li>
-                                <li class="nav-list">
-                                    <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button" 
-                                    data-bs-toggle="dropdown" aria-expanded="false"><span>menu</span></a>
+                                <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button"
+                                        data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
                                     <ul class="dropdown-menu" aria-labelledby="menuDropdown">
                                         <li><a class="dropdown-item" href="#">Breakfast</a></li>
                                         <li><a class="dropdown-item" href="#">Lunch</a></li>
@@ -47,9 +48,9 @@
                                 <li class="nav-list">
                                     <a href="#"><span>Bookings</span></a>
                                 </li>
-                                <li class="nav-list">
+                                <!--<li class="nav-list">
                                     <a href="#"><span>Contact</span></a>
-                                </li>
+                                </li>-->
                             </ul>
                         </div>                        
                     </div>
@@ -59,10 +60,60 @@
         </div>
     </header>
     <section>
+        <div class="col-auto">
+            <h1>thing we like to see</h1>
+        </div>
+
 
     </section>
-    <footer>
+    <footer class="container-fluid mt-auto list-inline-item">
+        <div class="row p-4 text-light">
+            <!--about section-->
+            <div class="col-sm-4 ">
+                <h5 class="uppercase general-sub">About</h5>
+                <button class="btn btn-link text-light p-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#aboutText" aria-expanded="false" aria-controls="aboutText">
+                    Learn more
+                </button>
+                <div class="collapse" id="aboutText">
+                    <p class="mt-2">
+                        karl's dinner is a hybrid restaurant, that combines a well-prepared homely meal 
+                        with exotic spices from around the world and the love of chess, and a pint of fine wine.
+                    </p>                 
+                </div> 
 
+            </div>
+            <div class="col-sm-4 ">
+                <h5 class="uppercase general-sub">Social</h5>
+                <ul class="list-inline social-links">
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank">
+                            <i class="fa fa-facebook" aria-hidden="true"></i>
+                            <span class="sr-only">Facebook</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank">
+                            <i class="fa fa-twitter" aria-hidden="true"></i>
+                            <span class="sr-only">Twitter</span>
+                        </a>
+                    </li>
+                    <li class="list-inline-item">
+                        <a href="#" target="_blank">
+                            <i class="fa fa-instagram" aria-hidden="true"></i>
+                            <span class="sr-only">Instagram</span>
+                        </a>
+                    </li>
+            </div>
+            <div class="col-sm-4 ">
+                <h5 class="uppercase general-sub">Contact</h5>
+                <p class="contact">
+                    Address: DuvbergVagen 10, Stockholm-Sweden.
+                    Phone: +46-78787878
+                    Email: KarlsDinner@dinner.com
+                </p>
+            </div>
+        </div>
     </footer>
     </div>
 </body>

@@ -26,7 +26,7 @@ body{
 
 .bground-color{
     color: floralwhite;
-    /*background-color: rgba(157, 163, 106, 0.4); */
+    background-color: rgba(157, 163, 106, 0.4); 
     text-align: center;
     padding: 1rem 0;
     position: relative; /* Ensure navbar positioning works within the header */    
@@ -79,17 +79,18 @@ body{
     display: none; /* Initially hidden */
     z-index: 10;
 }
+
 .dropdown-menu .dropdown-item {
-    color: white;
+    color: #212529;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s ease-in-out;
 }
 .dropdown-menu .dropdown-item:hover {
-    background-color: grey;
+    background-color: white;
 }
 /* Show Dropdown Menu on Hover */
 .nav-list:hover .dropdown-menu {
-    display: block;
+    display: flex;
 }
 .navbar-toggler {
     /*background-color: white;*/
