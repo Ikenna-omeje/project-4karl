@@ -26,7 +26,7 @@ body{
 
 .bground-color{
     color: floralwhite;
-    background-color: rgba(157, 163, 106, 0.4); 
+    /*background-color: rgba(157, 163, 106, 0.4);*/
     text-align: center;
     padding: 1rem 0;
     position: relative; /* Ensure navbar positioning works within the header */    
@@ -51,53 +51,74 @@ body{
     top: 0;
     right: 0;
     margin: 1rem;
+    color: #fafafa;
+    font-size: large;
 }
 #nav {
     display: flex;
     gap: 1.5rem;
+    flex-direction: column; /* Ensures vertical layout */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
 }
-.nav-list {
+.nav-item {
     position: relative;
+    color:#fafafa;
 }
+
 .nav-link {
-    color: floralwhite;
-    font-size: 1rem;
+    color: black;
+    font-size: 1.2rem;
     font-weight: 500;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 }
 .nav-link:hover {
     text-decoration: underline;
+    background-color: black;
+    color: white;
 }
 /* Dropdown Menu Styling */
 .dropdown-menu {
-    position: absolute;
+    position: relative;
     top: 100%;
-    left: 0;
     background-color: white;
-    color: fafa;
     border: none;
     padding: 0.5rem 0;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     display: none; /* Initially hidden */
-    z-index: 10;
+    flex-direction: column;
+
+    
 }
 
 .dropdown-menu .dropdown-item {
-    color: #212529;
+    color: black;
     padding: 0.5rem 1rem;
     transition: background-color 0.3s ease-in-out;
+    display: block;
+    text-decoration: none;
 }
 .dropdown-menu .dropdown-item:hover {
-    background-color: white;
+    /*background-color: black;*/
+    background-color: #007bff;
+    color: white;
 }
 /* Show Dropdown Menu on Hover */
 .nav-list:hover .dropdown-menu {
     display: flex;
 }
-.navbar-toggler {
-    /*background-color: white;*/
-    border: none;
+/*.navbar-toggler {
+    color: white;
+    padding: 0.5rem 1rem;
+    transition: background-color 0.3s ease-in-out;
+    
 }
 .navbar-toggler-icon {
-    color: black;
+    border: none;
+    color: #fafafa;
 }
 /* Responsive Design */
 @media (max-width: 768px) {

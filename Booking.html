@@ -34,10 +34,10 @@
                         <div class="collapse navbar-collapse" id="navbar-Nav">
                             <ul id="nav">
                                 <li class="nav-list">
-                                    <a href="#"><span>Home</span></a>
+                                    <a href="index.html"><span>Home</span></a>
                                 </li>
                                 <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="menuDropdown" role="button"
+                                    <a class="nav-link dropdown-toggle" href="Menu.html" id="menuDropdown" role="button"
                                         data-bs-toggle="dropdown" aria-expanded="false">Menu</a>
                                     <ul class="dropdown-menu" aria-labelledby="menuDropdown">
                                         <li><a class="dropdown-item" href="#">Breakfast</a></li>
@@ -49,7 +49,7 @@
                                     <a href="Booking.html"><span>Bookings</span></a>
                                 </li>
                                 <li class="nav-list">
-                                    <a href="#"><span>Contact</span></a>
+                                    <a href="contact.html"><span>Contact</span></a>
                                 </li>
                             </ul>
                         </div>                        
@@ -59,9 +59,16 @@
 
         </div>
     </header>
-    <section>
-        <div class="col-auto">
-            <h1>things we like to book</h1>
+    <section class="container-fluid mt-auto">
+        <div class="col-auto col-sm-4">
+            <h1 class="Text-center">Book here!</h1>
+            <form>
+                <div class="mb-3">
+                    <label for="datePicker" class="form-label">Select an Available Date</label>
+                    <input type="text" id="datePicker" class="form-control" placeholder="Pick a date" required>
+                </div>
+                <button type="submit" class="btn btn-primary">Book Now</button>
+            </form>
         </div>
 
 
