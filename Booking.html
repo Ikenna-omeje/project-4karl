@@ -97,11 +97,14 @@
                         maxDate: "2090-12-31",
                         disable: ["2024-12-24", "2024-12-25", "2025-01-01"], // Example of disabled dates
                         weekNumbers: true,
+
+                        onChange: function(selectedDates, dateStr, instance) {
+                            console.log("Selected date: " + dateStr); // Logs the selected date
+                        }
                     });
                     
-
                     //handle submission
-                    document.getElementById("BookingForm").addEventListener("submit", function (e) {
+                    /*document.getElementById("bookingForm").addEventListener("submit", function (e) {
                         e.preventDefault();
                         const formData = New FormData(e.target);
 
@@ -120,7 +123,7 @@
                                 document.getElementById("responseMessage").textContent = "An error occurred.";
                                 console.error("Error submitting booking:", error);
                             });
-                    })
+                        })*/
                 </script>
             </div>
 
