@@ -110,16 +110,7 @@ body{
 .nav-list:hover .dropdown-menu {
     display: flex;
 }
-/*.navbar-toggler {
-    color: white;
-    padding: 0.5rem 1rem;
-    transition: background-color 0.3s ease-in-out;
-    
-}
-.navbar-toggler-icon {
-    border: none;
-    color: #fafafa;
-}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     #nav {
@@ -144,6 +135,55 @@ body{
 
 .collapse.show {
     display: flex;
+}
+/*---------Contact section....*/
+.cont-color {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    text-align: center; /* Aligns text */
+    width: 100%; /* Ensures full page width */
+    color: #fafafa; /* Font color */
+    background-color: rgba(49, 47, 47, 0.5); /* Background color with transparency */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0px;
+    /*padding: 2rem 0;  Adds vertical padding */
+}
+ 
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+h4 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
+}
+
+/*---------Booking form....*/
+#bookingForm{
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    text-align: center; /* Aligns text */
+    width: 100%; /* Ensures full page width */
+    color: #fafafa; /* Font color */
+    background-color: rgba(49, 47, 47, 0.5); /* Background color with transparency */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-bottom: 0px;
 }
 /*---------footer....*/
 footer {
