@@ -1,5 +1,25 @@
 {
   "dependencies": {
+    "express": "^4.21.2",
     "flatpickr": "^4.6.13"
-  }
+  },
+  "name": "project-4karl",
+  "description": "![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)",
+  "version": "1.0.0",
+  "main": "booking.js",
+  "type":"module",
+  "scripts": {
+    "start": "node booking.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ikenna-omeje/project-4karl.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ikenna-omeje/project-4karl/issues"
+  },
+  "homepage": "https://github.com/Ikenna-omeje/project-4karl#readme"
 }

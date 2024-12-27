@@ -1,13 +1,38 @@
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+const express = require("express");
+const app = express();
 
-// Initialize the Flatpickr date picker
+// Middleware to parse JSON request bodies
+app.use(express.json());
 
-        flatpickr("#datePicker", {
-            enable: [
-                "2023-12-22", // Example of available dates
-                "2023-12-25",
-                "2023-12-30",
-            ],
-            minDate: "today", // Prevent past dates
-            dateFormat: "Y-m-d" // Format for the selected date
-        });
+//in-memory storage
+const availableDates = ["2024-01-15", "2024-01-20", "2024-02-10"];
+const bookings = [];
+
+//end-point to fetch available dates
+app.get("/api/available-dates", (req, res) => {
+    res.json({ dates: availableDates });
+});
+
+// end-point to handle bookings
+app.post("/api/book-date", (req, res) => {
+    const { date, name, email } = req.body;
+//validate date
+    if (!availableDates.includes(date)) {
+        return res.status(400).json({ message: "Selected date is not available."});
+    }
+
+//store date
+bookings.push({ date, name, email});
+
+//remove date from availability
+const index = availableDates.indexOf(date);
+    if (index > -1) availableDates.splice(index, 1);
+
+    res.json({message: "Booking confirmed!"});
+});
+
+//start the server
+const PORT = 3000;
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
