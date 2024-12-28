@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
     <title>KarlsDinner</title>
 </head>
 
@@ -61,60 +61,77 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </header>
-    <section class="container-fluid mt-auto">
+
+    <section class="container mt-4">
+        <h1 class="Text-center">Book here!</h1>
         <div class="col-auto col-sm-4">
-            <h1 class="Text-center">Book here!</h1>
-            <form>
+            <form id="bookingForm">
                 <div class="mb-3">
                     <label for="datePicker" class="form-label">Select an Available Date</label>
                     <input type="text" id="datePicker" class="form-control" placeholder="Pick a date" required>
                 </div>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name:</label>
+                    <input type="text" id="name" class="form-control" placeholder="Your Name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email:</label>
+                    <input type="email" id="email" class="form-control" placeholder="Your Email" required>
+                </div>
                 <button type="submit" class="btn btn-primary">Book Now</button>
             </form>
-
-            <div class="container mt-5">
-                <h2>Book a Date</h2>
-                <form id="bookingForm">
-                    <!--<label for="datePicker">Select a Date:</label>
-                    <input type="text" id="datePicker" name="date" class="form-control" placeholder="Choose a date" required>-->
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" class="form-control" placeholder="Your Name" required>
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" class="form-control" placeholder="Your Email" required>
-                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
-                </form>
-                
-                <div id="responseMessage" class="mt-3"></div>
-
-                <script>
-                    flatpickr("#datePicker", {
-                        enableTime: true,
-                        dateFormat: "Y-m-d H:i",
-                        minDate: "today",
-                        maxDate: "2090-12-31",
-                        disable: ["2024-12-24", "2024-12-25", "2025-01-01"], // Example of disabled dates
-                        weekNumbers: true,
-
-                        onChange: function(selectedDates, dateStr, instance) {
-                            fetch("/api/available-dates") // Call backend for available dates
-                                .then(response => response.json())
-                                .then(data => {
-                                    datePicker.set("enable", data.dates); // Populate Flatpickr with dates
-                                })
-                                .catch(error => console.error("Error fetching available dates:", error));
-                            }/*console.log("Selected date: " + dateStr); // Logs the selected date*/
-            
-                        });
-                </script>
-            </div>
+            <div id="responseMessage" class="mt-3"></div>
 
         </div>
-
-
     </section>
+    
+    <script>
+        fetch("http://localhost:3000/api/available-dates")
+            .then(response => {
+                if (!response.ok) throw new error ("failed to fetch available updates");
+                return response.json();
+            })
+            .then(data => {
+                flatpickr("#datePicker", {
+                    enable: data.dates, // Use dates from the backend
+                    enableTime: true,
+                    dateFormat: "Y-m-d",
+                    minDate: "today", // Ensure no past dates are selectable
+                    weekNumbers: true,
+                });
+            })
+            .catch(error => console.error("Error fetching available dates:", error));
+
+    //handle form submission
+
+        document.getElementById("bookingForm").addEventListener("submit", function (event) {
+
+            event.preventDefault();
+            const date = document.getElementById("datePicker").value;
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+
+            fetch("http://localhost:3000/api/book-date", {
+                method: "post",
+                headers: {
+                    "content-type": "application/json",
+                },
+                body: JSON.stringify({ date, name, email }),
+            })
+                .then(response => response.json())
+                .then(data => {
+                    const responseMessage = document.getElementById("responseMessage");
+                    responseMessage.textContent = data.message;
+                    responseMessage.style.color = response.status === 400 ? "red" : "green";
+                })
+
+                .catch(error => console.error("Error submitting booking:", error));
+        });
+
+    </script>
+
     <!--<footer class="container-fluid mt-auto list-inline-item">
         <div class="row p-4 text-light">
             <!--about section
@@ -164,7 +181,7 @@
             </div>
         </div>
     </footer>-->
-    </div>
+    
 </body>
 
 </html>
